@@ -4,7 +4,12 @@ title: About me
 #cover-img: /assets/img/me.jpg
 #subtitle: Why you'd want to go on a date with me
 ---
-![Nischay Joshi](/assets/img/me.jpg){: .mx-auto.d-block :}
+<!---
+Adding a picture of mine, but in round shape
+-->
+<img src="/assets/img/me.jpg" alt="Nischay Joshi" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; display: block; margin-left: auto; margin-right: auto;"><br>
+
+![Nischay Joshi](/assets/img/me.jpg){: .mx-auto.d-block :}<br>
 Hello! I'm Nischay Joshi, a budding Electrical Engineer from the University of British Columbia (UBC), with an expected graduation date in May 2025. I'm based in Vancouver, BC, and I have a deep passion for hardware and fimrware development.
 
 I'm skilled in numerous technical areas such as microcontrollers, digital logic design and robotics. My programming languages of choice are C++, C, Python, Assembly, and System Verilog. I'm also familiar with technologies like Git, SVN, MATLAB, Altium Designer, and Xilinx Vivado/Vitis/Petalinux.
