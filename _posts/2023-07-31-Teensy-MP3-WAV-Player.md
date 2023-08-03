@@ -13,7 +13,7 @@ readtime: true
 ## Introduction
 This post is about a simple music player that I made using a Teensy 4.0 microcontroller. The player is capable of playing MP3 and WAV files from a micro SD card. It has a simple user interface which is currently controlled via Serial Inputs( I know this beats the purpose, using a computer to control this, but this can be easily modified to take in other forms of intputs too like buttons, sliders or touch screens). The audio playback is non blocking i.e the Teensy can do other tasks while the music is playing.
 
-![Teensy Music Player](/assets/img/teensy_wav_player_image.png){: .mx-auto.d-block :}
+![Teensy Music Player](Nischay2312.github.io/assets/img/teensy_wav_player_image.png){: .mx-auto.d-block :}
 
 ## Hardware Used
 - [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)
