@@ -192,7 +192,7 @@ if __name__ == '__main__':
 ```
 #### Note:
 {: .box-note}
-I am _not_ a Computer Science Student and so I haven't taken courses on networks, OS or concurrency. I try to learn these on my own and so I am not sure if the code above is the best way to do it. If you have any suggestions or feedback, please feel free to leave them in the comments section below.
+**Note:** I am _not_ a Computer Science Student and so I haven't taken courses on networks, OS or concurrency. I try to learn these on my own and so I am not sure if the code above is the best way to do it. If you have any suggestions or feedback, please feel free to leave them in the comments section below.
 
 ### Explanation of the Python Script
 The script should be pretty explantory with the comments. On a higher level, the script does the following:
