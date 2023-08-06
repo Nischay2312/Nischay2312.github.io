@@ -20,12 +20,13 @@ author: Nischay Joshi
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resume: "resume"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
   Home: "https://Nischay2312.github.io"
+  Projects: "projects"
+  Resume: "resume"
+  About Me: "aboutme"
+  #Resources:
+  #  - Beautiful Jekyll: "https://beautifuljekyll.com"
+  #  - Learn markdown: "https://www.markdowntutorial.com/"
 
 ################
 # --- Logo --- #
