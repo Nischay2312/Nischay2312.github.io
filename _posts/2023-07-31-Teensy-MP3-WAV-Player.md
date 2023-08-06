@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Teensy Music Player
-subtitle: An simple, easy to use MP3/WAV player
+subtitle: A simple, easy to use MP3/WAV player
 #cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/teensy_wav_player_image.png
 gh-repo: Nischay2312/TeensyWavPlayer
 gh-badge: [star, fork, follow]
 tags: [teensy 4.0, music player, mp3, wav, audio, sd card]
 readtime: true
+comments: true
 ---
 
 ## Introduction
