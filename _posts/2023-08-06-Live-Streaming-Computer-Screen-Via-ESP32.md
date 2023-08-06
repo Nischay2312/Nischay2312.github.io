@@ -190,8 +190,9 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+#### Note:
 {: .box-note}
-**Note:** I am _not_ a Computer Science Student and so I haven't taken courses on networks, OS or concurrency. I try to learn these on my own and so I am not sure if the code above is the best way to do it. If you have any suggestions or feedback, please feel free to leave them in the comments section below.
+I am _not_ a Computer Science Student and so I haven't taken courses on networks, OS or concurrency. I try to learn these on my own and so I am not sure if the code above is the best way to do it. If you have any suggestions or feedback, please feel free to leave them in the comments section below.
 
 ### Explanation of the Python Script
 The script should be pretty explantory with the comments. On a higher level, the script does the following:
@@ -453,5 +454,5 @@ You can find the YouTube video for this project embedded below or click [here](h
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-yk1-vx2jtI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Future Work
-- The major work neede is to imporve the frame rate. Sending raw binary image data is too long and thus slows down the FPS. In future I am planning to compress the image
+- The major work needed is to imporve the frame rate. Sending raw binary image data is too long and thus slows down the FPS. In future I am planning to compress the image
 before sending it to the ESP32. The decompression will add some overhead processingt time on the ESP but we can utilize the ESP32's dual core to do this.
