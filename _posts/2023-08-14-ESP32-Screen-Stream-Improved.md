@@ -11,7 +11,7 @@ comments: true
 ---
 
 ## Introduction
-This project is a continuation of a past project done by me. That can be found [_Here_](https://nischay2312.github.io/2023-08-06-Live-Streaming-Computer-Screen-Via-ESP32/). This project aims to further imporve the FPS and decrease the Latency in getting the video data from the computer. I tried three different approaches to stream my screen. Keep reading to find out which one worked the best.
+This project is a continuation of a past project done by me. That can be found _[Here]_(https://nischay2312.github.io/2023-08-06-Live-Streaming-Computer-Screen-Via-ESP32/). This project aims to further imporve the FPS and decrease the Latency in getting the video data from the computer. I tried three different approaches to stream my screen. Keep reading to find out which one worked the best.
 
 ![Streaming Computer Screen Via ESP32](https://nischay2312.github.io/assets/img/WinStream_improved.png){: .mx-auto.d-block :}
 
@@ -27,7 +27,7 @@ This project is a continuation of a past project done by me. That can be found [
     - Python: mss, PIL, numpy, cv2, websocket
     - Arduino: TFT_eSPI, SPI, WiFi, WebServer, ArduinoJson, WebSocketsServer, JPEGDecoder, WiFI UDP
 
-The project GitHub repository can be found [*_here_*](https://github.com/Nischay2312/WindowStreamer)
+The project GitHub repository can be found **_[here]_**(https://github.com/Nischay2312/WindowStreamer)
 
 ## Python Script: Screen Capturing
 I completly revamped the python script for this well not completely but I got rid of the thread and the queues, they added delay. I tried three different approaches to stream my screen. 
@@ -35,7 +35,7 @@ I completly revamped the python script for this well not completely but I got ri
 2. Using Websockets to send the data but image is compressed in JPEG.
 3. Using UDP to send the data in bitmap format.
 
-Now to keep the blog post small and consise I wont add the code fo all three approaches but feel free to go to the project GitHub page to check out the code for all three approaches. 
+Now to keep the blog post small and consise I wont add the code for all three approaches but feel free to go to the project GitHub page to check out the code for all three approaches. 
 
 ### Approach 1: Websockets + Bitmap
 The complete script is given below. The script is pretty self explanatory with the comments. On a higher level, the script does the following:
@@ -125,7 +125,7 @@ while True:
         break
 ```
 ### Approach 2: Websockets + JPEG
-I am not adding the complete script but will add small snippets. The main structure is similar:
+I am not adding the complete script but will add small snippets. The main structure is similar.
 As you can see the image is just resized and no further processing is done afterwards
 ```python
 while True:
@@ -489,7 +489,7 @@ You can find the YouTube video for this project embedded below or click [here](h
 <iframe width="800" height="450" src="https://www.youtube.com/embed/srW8B4_ZjHI" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Conclusions + Future Work
-- I tested all three approaches and the *_bitmap version is the best_*. Transmission through that has the least loss or missed frames, depending on the wifi traffic, the framerate dropped to 4-5FPS but only for a few seconds, then went back up. But the only problem there is the size of data sent. 168x120x2 bytes takes a while to send (70-80ms) and that puts the FPS at 12-15. 
-- The *_JPEG version_* was the second best, I was able to reduce file size to 2000 bytes and that was sent in 20-30ms. But the problem there was the JPEG decoding on ESP, it took 50-60ms to decode the image and that put the FPS at 12-15. So the FPS was the same as the bitmap version but the image quality was not as good. 
-- The *_UDP version_* was the worst. Since there is no guarantee that the data will be received, there were a lot of missed packets and the tranmisison was faster but the stream quality was worst thus I discarded it.
+- I tested all three approaches and the _**bitmap version is the best**_. Transmission through that has the least loss or missed frames, depending on the wifi traffic, the framerate dropped to 4-5FPS but only for a few seconds, then went back up. But the only problem there is the size of data sent. 168x120x2 bytes takes a while to send (70-80ms) and that puts the FPS at 12-15. 
+- The _**JPEG version**_ was the second best, I was able to reduce file size to 2000 bytes and that was sent in 20-30ms. But the problem there was the JPEG decoding on ESP, it took 50-60ms to decode the image and that put the FPS at 12-15. So the FPS was the same as the bitmap version but the image quality was not as good. 
+- The **_UDP version_** was the worst. Since there is no guarantee that the data will be received, there were a lot of missed packets and the tranmisison was faster but the stream quality was worst thus I discarded it.
 - In future I would like to use c++ to send the data from my computer as I believe it might be faster than python.
