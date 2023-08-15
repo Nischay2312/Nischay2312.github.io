@@ -11,7 +11,7 @@ comments: true
 ---
 
 ## Introduction
-This project is a continuation of a past project done by me. That can be found _[Here]_(https://nischay2312.github.io/2023-08-06-Live-Streaming-Computer-Screen-Via-ESP32/). This project aims to further imporve the FPS and decrease the Latency in getting the video data from the computer. I tried three different approaches to stream my screen. Keep reading to find out which one worked the best.
+This project is a continuation of a past project done by me. That can be found [**_Here_**](https://nischay2312.github.io/2023-08-06-Live-Streaming-Computer-Screen-Via-ESP32/). This project aims to further imporve the FPS and decrease the Latency in getting the video data from the computer. I tried three different approaches to stream my screen. Keep reading to find out which one worked the best.
 
 ![Streaming Computer Screen Via ESP32](https://nischay2312.github.io/assets/img/WinStream_improved.png){: .mx-auto.d-block :}
 
@@ -27,7 +27,7 @@ This project is a continuation of a past project done by me. That can be found _
     - Python: mss, PIL, numpy, cv2, websocket
     - Arduino: TFT_eSPI, SPI, WiFi, WebServer, ArduinoJson, WebSocketsServer, JPEGDecoder, WiFI UDP
 
-The project GitHub repository can be found **_[here]_**(https://github.com/Nischay2312/WindowStreamer)
+The project GitHub repository can be found [**_here_**](https://github.com/Nischay2312/WindowStreamer)
 
 ## Python Script: Screen Capturing
 I completly revamped the python script for this well not completely but I got rid of the thread and the queues, they added delay. I tried three different approaches to stream my screen. 
