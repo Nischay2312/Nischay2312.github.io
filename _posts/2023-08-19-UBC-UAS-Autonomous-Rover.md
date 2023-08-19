@@ -32,16 +32,16 @@ The Rover's Driving system comprised of two DC motors and a motor driver. We use
 
 ### Location and Navigation System
 The rover's location and navigation system comprised of a GPS module and an IMU. The GPS module we used was the [SparkFun GPS Breakout - NEO-M9N](https://www.sparkfun.com/products/15712). This GPS module is capable of outputting NMEA sentences at 10Hz. The GPS module was connected to the Teensy using a serial connection. The IMU we used was the [Adafruit BNO055](https://www.adafruit.com/product/2472). This IMU is capable of outputting orientation data at 100Hz. The IMU was connected to the Teensy using an I2C connection. Here is an image of the GPS module and the IMU:
-![UAS Navigaition System](https://nischay2312.github.io/assets/img/UAS_Rover_Nav.jpg){: .mx-auto.d-block :}
+![UAS Navigaition System](https://nischay2312.github.io/assets/img/UAS_Rover_Nav.png){: .mx-auto.d-block :}
 
 The IMU was used to get the rover's orientation and the GPS module was used to get the rover's location. The rover's orientation was used to control the rover's direction and the rover's location was used to navigate the rover to the specified location. We employed a PID control loop to steer the rover autonomously. The control variable was the heading of the rover and the setpoint was the heading to the specified location. The PID control loop was implemented using a in house PID library that I wrote. 
 
 Apart from steering, the IMU had one more very important function. It was used to detect when the rover has landed on ground. The rover was lowered from the drone using a automatic winch. Once the rover landed on the ground, it had to automatically start its mission. So, we needed the IMU's accelerometer to detect the landing. 
 
 The landing detection algorithm was using the total X, Y and Z axis acceleration and computing the total acceleration using the following formula:
-$$
+$
 a_{total} = \sqrt{a_x^2 + a_y^2 + a_z^2}
-$$
+$
 
 Once the magnitude was higher than a certain threshold it would mean then there was some kind of impact. tHis could be due to rover landing or wind that made the rover swing while being deployed or something hit the rover while it was being deployed. So we neede to be certain that the rover has actually landed. So we used one more step. 
 After the initial spike, we would sample this magnitude for a small window and compute the standard deviation of the samples. If the standard deviation was below a certain threshold, we would assume that the rover has landed. This would help us differentiate between the rover landing and the rover swinging due to wind. If the rover was still moving, the standard deviation would be high but if the rover was completly stationary, the standard deviation would be low. Thus, using this algorithm, we were able to detect when the rover landed. Below is a logic diagram of the algorithm:
