@@ -39,10 +39,16 @@ The IMU was used to get the rover's orientation and the GPS module was used to g
 Apart from steering, the IMU had one more very important function. It was used to detect when the rover has landed on ground. The rover was lowered from the drone using a automatic winch. Once the rover landed on the ground, it had to automatically start its mission. So, we needed the IMU's accelerometer to detect the landing. 
 
 The landing detection algorithm was using the total X, Y and Z axis acceleration and computing the total acceleration using the following formula:
-$
-a_{total} = \sqrt{a_x^2 + a_y^2 + a_z^2}
-$
+![Total Acceleration Formula](https://nischay2312.github.io/assets/img/UAS_Rover_Eqn.png){: .mx-auto.d-block :}
 
 Once the magnitude was higher than a certain threshold it would mean then there was some kind of impact. tHis could be due to rover landing or wind that made the rover swing while being deployed or something hit the rover while it was being deployed. So we neede to be certain that the rover has actually landed. So we used one more step. 
 After the initial spike, we would sample this magnitude for a small window and compute the standard deviation of the samples. If the standard deviation was below a certain threshold, we would assume that the rover has landed. This would help us differentiate between the rover landing and the rover swinging due to wind. If the rover was still moving, the standard deviation would be high but if the rover was completly stationary, the standard deviation would be low. Thus, using this algorithm, we were able to detect when the rover landed. Below is a logic diagram of the algorithm:
 ![Landing Detection Algorithm](https://nischay2312.github.io/assets/img/UAs_Rover_Logic.png){: .mx-auto.d-block :}
+
+### Display System
+The display system was used as a debugging tool. It was used to display the rover's current location, the rover's heading, the rover's setpoint, and the rover's current state. The display system comprised of a 128x64 OLED display. The display was connected to the Teensy using an I2C connection. Here is an gif of the display:
+![Display Gif](https://nischay2312.github.io/assets/img/UAS_Rover_Display.gif){: .mx-auto.d-block :}
+
+## Here is a Demo of the rover in action:
+This video demonstrates the rovers ability to go towards a particular direction. Which it does correctly. The steering PID was not perfectly tuned. As seen by the oscillations in the rovers movement.
+<iframe width="315" height="560" src="https://youtube.com/embed/h0XAOdwjpuU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
