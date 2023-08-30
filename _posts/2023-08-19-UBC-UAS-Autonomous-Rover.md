@@ -39,7 +39,7 @@ The IMU was used to get the rover's orientation and the GPS module was used to g
 Apart from steering, the IMU had one more very important function. It was used to detect when the rover has landed on ground. The rover was lowered from the drone using a automatic winch. Once the rover landed on the ground, it had to automatically start its mission. So, we needed the IMU's accelerometer to detect the landing. 
 
 The landing detection algorithm was using the total X, Y and Z axis acceleration and computing the total acceleration using the following formula:
-![Total Acceleration Formula](https://nischay2312.github.io/assets/img/UAS_Rover_Eqn.png){: .mx-auto.d-block :}
+![Total Acceleration Formula](https://nischay2312.github.io/assets/img/UAS_rover_Eqn.png){: .mx-auto.d-block :}
 
 Once the magnitude was higher than a certain threshold it would mean then there was some kind of impact. tHis could be due to rover landing or wind that made the rover swing while being deployed or something hit the rover while it was being deployed. So we neede to be certain that the rover has actually landed. So we used one more step. 
 After the initial spike, we would sample this magnitude for a small window and compute the standard deviation of the samples. If the standard deviation was below a certain threshold, we would assume that the rover has landed. This would help us differentiate between the rover landing and the rover swinging due to wind. If the rover was still moving, the standard deviation would be high but if the rover was completly stationary, the standard deviation would be low. Thus, using this algorithm, we were able to detect when the rover landed. Below is a logic diagram of the algorithm:
