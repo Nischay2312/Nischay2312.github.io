@@ -2,7 +2,7 @@
 layout: post
 title: UBC UAS Autonomous Rover
 subtitle: A rover built to deliver a water bottle autonomously
-thumbnail-img: /assets/img/UAS_Rover.png
+thumbnail-img: /assets/img/UAS_Rover_1.png
 tags: [Teensy4.0, Design Team, UBC UAS, IMU, GPS, Rover, Motor Driver, OLED Display]
 readtime: true
 comments: true
@@ -11,7 +11,7 @@ comments: true
 ## Introduction
 This project was made over the course of 4 months as a part of the UBC UAS Design Team. The goal of the project was to build a rover that could autonomously navigate a course and deliver a water bottle to a specified location. The rover was built using a Teensy 4.0 microcontroller, a GPS module, an IMU, a motor driver, and an OLED display. The rover was programmed in C++ using the Arduino IDE. 
 
-![Rover Image](https://nischay2312.github.io/assets/img/UAS_Rover.png){: .mx-auto.d-block :}
+![Rover Image](https://nischay2312.github.io/assets/img/UAS_Rover_1.png){: .mx-auto.d-block :}
 
 ## Design
 There are 4 main parts of the design that I would like to discuss: 
