@@ -29,7 +29,7 @@ This was mostly done by mechanical team. The parachute was hand sewn with cloth 
 
 ### Hardware Design
 The system contains for three major sub sections: Power distribution system, micro-controller circuitry and all the sensors/peripherals attached. Since the system was to be gliding in air, we defintily needed battery power. I decided to chosse a 2 cell 7.4V li-po battery as they have good energy desnity and are sufficiently light and small to be easily caired by the drone that drops the parachute. Below is a high level diagram of the system, ignore the 3.7V battery, we upgraded to 7.4V and used a Buck converter
-![Hardware High Level Diagram](https://nischay2312.github.io/assets/img/Parachute_Hardware_flow.png){: .mx-auto.d-block :}
+![Hardware High Level Diagram](https://nischay2312.github.io/assets/img/Parachute_Hardware_Flow.png){: .mx-auto.d-block :}
 #### Power Distribution System
 This was essentially used to convert the 7.4V from lipo to 5V/3.3V to drive the servos, micro and all sensors. A buck converter was used to step down the voltage. The output was capable to driving 5V at 4A. We decied high current rating due to the servo motors.
 #### Micro-controller System
@@ -43,7 +43,7 @@ I designed the complete PCB in altium designed and it was manufactured by PCBWay
 
 ### Software Design
 Since we are using ESP32, we have a variety of stuff at our disposal, better performance, lots of hardware peripherals, wireless communication and dual cores. Our idea was to run a couple of tasks in parallel each doing one part of the system. The communication task would get the GPS co-ordinates from the aircraft, the sensor data acquisation task reads and processes data from the sensors, battery mamagement task records the battery voltage and the steering task to control the trajectory of the parachute. Below is our software flow diagram:
-![Software High Level Diagram](https://nischay2312.github.io/assets/img/Parachute_Software_flow.png){: .mx-auto.d-block :}
+![Software High Level Diagram](https://nischay2312.github.io/assets/img/Parachute_Software_Flow.png){: .mx-auto.d-block :}
 
 ### Localization and Telemetry Design
 This part describes how the data from various sensor was acquired and then further processed to get a precise _estimate_ of the parachtue's real time 3d position and orientation. But before I discuss the design it might be beneficial to understand why we even need extra processing.
