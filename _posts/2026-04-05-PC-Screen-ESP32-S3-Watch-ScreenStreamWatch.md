@@ -28,17 +28,16 @@ I made a video that walks through the hardware, the big-picture software story, 
 
 ## Hardware
 
-The firmware targets a specific kit: the **[Waveshare ESP32-S3 Touch AMOLED 2.06″](https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Introduction)**. It’s not a generic “any ESP32 + any display” wiring job—the repo pulls the **Waveshare BSP** from Espressif’s component manager so the **round AMOLED**, **touch controller**, and **audio path** match the board.
+The firmware targets a specific kit: the **[Waveshare ESP32-S3 Touch AMOLED 2.06″](https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Introduction)**. We also pull the **Waveshare BSP** from Espressif’s component manager so the **round AMOLED**, **touch controller**, and **audio path** match the board.
 
 At a high level the board gives you:
 
-- **ESP32-S3** — dual-core MCU, **Wi‑Fi**, enough headroom to **decode JPEG** and run **LVGL** for the UI  
-- **AMOLED** — full-color, high-contrast; the “entire PC screen” is really **your desktop resized and compressed into video frames**, but on the wrist it still reads clearly  
-- **Capacitive touch** — navigate Wi‑Fi setup, discovery, pairing, and stream controls  
-- **I²S codec + speaker** — optional **PCM audio** from the PC when you run the **AV** desktop script (muxed on the same TCP session)  
-- **USB** — flash firmware and serial debug; day-to-day streaming is over **Wi‑Fi**
+- **ESP32-S3** : dual-core MCU, **Wi‑Fi**, enough headroom to **decode JPEG** and run **LVGL** for the UI  
+- **AMOLED** : full-color, high-contrast; the “entire PC screen” is really **your desktop resized and compressed into video frames**
+- **Capacitive touch** : navigate Wi‑Fi setup, discovery, pairing, and stream controls  
+- **I²S codec + speaker** : **PCM audio** from the PC when you run the **AV** desktop script (muxed on the same TCP session)  
 
-You’ll also want the watch and PC on the **same LAN**. **Guest Wi‑Fi** or **AP isolation** on the router often blocks **mDNS** or device-to-device traffic—if discovery fails, that’s the first place I check.
+You’ll also want the watch and PC on the **same LAN**. **Guest Wi‑Fi** or **AP isolation** on the router often blocks **mDNS** or device-to-device traffic, if discovery fails, that’s the first place I check.
 
 ---
 
@@ -70,11 +69,6 @@ Full step-by-step text lives in the repository **[README](https://github.com/Nis
 
 ---
 
-## What to expect (and what not to)
-
-This is **JPEG over Wi‑Fi** to a **small MCU**, not **HDMI**. You’ll see **latency**; **FPS** drops if you crank resolution or quality. The board’s **PSRAM** helps with large buffers, but **very large JPEGs** can still hit **`APP_MAX_JPEG_SIZE`** and similar limits in firmware. That’s normal for the class of project—tune **`--quality`**, **`--width`**, **`--height`**, and **`--fps`** on the Python side until it feels acceptable on your network.
-
----
 
 ## Source code and license
 

@@ -1,5 +1,5 @@
 ---
 layout: home
 title: Nischay Joshi
-subtitle: This is where I will be posting my projects and other stuff.
+subtitle: Projects and posts — ASIC / digital design, embedded, and hardware.
 ---
