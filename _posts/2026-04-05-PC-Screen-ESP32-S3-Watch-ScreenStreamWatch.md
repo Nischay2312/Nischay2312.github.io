@@ -2,7 +2,7 @@
 layout: post
 title: I Put My Entire PC Screen on a Watch (And It Actually Works)
 subtitle: ScreenStreamWatch — ESP32-S3 AMOLED, Wi‑Fi, JPEG streaming, and a Python desktop server
-thumbnail-img: https://img.youtube.com/vi/ACfcJynbRjY/maxresdefault.jpg
+thumbnail-img: https://youtu.be/vKD8y0sMkXs?si=-XDpIGjR0P5waFsV/maxresdefault.jpg
 gh-repo: Nischay2312/ScreenStreamWatch
 gh-badge: [star, fork, follow]
 tags: [ESP32-S3, Waveshare, AMOLED, ESP-IDF, LVGL, Python, mDNS, JPEG, Screen Mirroring, Wi-Fi]
@@ -15,13 +15,13 @@ This project is the latest step in something I’ve been tinkering with for a wh
 I made a video that walks through the hardware, the big-picture software story, and a full setup demo:
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=ACfcJynbRjY" target="_blank" rel="noopener">
+  <a href="https://youtu.be/vKD8y0sMkXs?si=-XDpIGjR0P5waFsV" target="_blank" rel="noopener">
     <strong>Watch on YouTube → I Put My Entire PC Screen on a Watch (And It Actually Works)</strong>
   </a>
 </p>
 
 <div style="max-width: 800px; margin: 1.5rem auto;">
-  <iframe width="560" height="315" style="width: 100%; max-width: 100%; aspect-ratio: 16 / 9; height: auto; min-height: 240px;" src="https://www.youtube.com/embed/ACfcJynbRjY" title="PC screen on ESP32-S3 watch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe width="560" height="315" style="width: 100%; max-width: 100%; aspect-ratio: 16 / 9; height: auto; min-height: 240px;" src="https://youtu.be/vKD8y0sMkXs?si=-XDpIGjR0P5waFsV" title="PC screen on ESP32-S3 watch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ---
@@ -75,4 +75,4 @@ Full step-by-step text lives in the repository **[README](https://github.com/Nis
 - **Repository:** [github.com/Nischay2312/ScreenStreamWatch](https://github.com/Nischay2312/ScreenStreamWatch)  
 - Application code under **`main/`** and **`tools/`** is **AGPL-3.0** (see **`LICENSE`** in the repo). ESP-IDF, LVGL, Waveshare BSP, and other pulled components keep their own licenses.
 
-If you build this or extend it (UI, audio, protocols), I’m curious what you come up with—leave a comment here or on the [YouTube video](https://www.youtube.com/watch?v=ACfcJynbRjY).
+If you build this or extend it (UI, audio, protocols), I’m curious what you come up with—leave a comment here or on the [YouTube video](https://youtu.be/vKD8y0sMkXs?si=-XDpIGjR0P5waFsV).
