@@ -254,10 +254,12 @@ date_format: "%B %-d, %Y"
 
 # Output options (more information on Jekyll's site)
 timezone: "America/Toronto"
+# Show posts even when the filename date is after build time (GitHub runs in UTC; avoids hiding “future” posts)
+future: true
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 50
 
 kramdown:
   input: GFM
