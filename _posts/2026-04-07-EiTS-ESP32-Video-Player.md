@@ -9,7 +9,6 @@ tags: [ESP32-S3, MJPEG, MP3, Arduino, FreeRTOS, FFmpeg, SD card, I2S, OTA]
 readtime: true
 comments: true
 ---
-
 **EiTS** (Esp infoTainment System) is a project I built around an **ESP32-S3**: a tiny **ST7735** LCD, **I2S audio**, and files on a **microSD** card become a portable player for **MJPEG** “video” and **MP3** audio. The idea started from the [Mini Retro TV](https://www.instructables.com/Mini-Retro-TV/) Instructables project, then grew into its own hardware (power path, battery UI, 3D printed case) and firmware with **FreeRTOS** tasks, gesture detection on a **single button**, **loop** and **auto next** modes, **deep sleep** after idle time, and **OTA** updates with a **QR code** on screen for convenience.
 
 ![EiTS splash artwork](https://nischay2312.github.io/assets/img/eits-splash.png){: .mx-auto.d-block :}
