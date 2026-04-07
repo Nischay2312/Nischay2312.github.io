@@ -9,10 +9,7 @@ tags: [SCARA, Robot Arm, PID Control, Simulink, SimulationX, SolidWorks, PCB Des
 readtime: true
 comments: true
 ---
-
-## Introduction
-
-In third year at UBC, a group of three of us took on ELEC 391: a capstone style course where the objective was to design and simulate a fully functional robot arm. Our reference model was the **Yamaha YK350XG**, a commercial SCARA (Selective Compliance Articulated Robot Arm) used in industrial pick and place applications. We designed the robot entirely from scratch: the mechanical assembly in SolidWorks, the electronics in Altium Designer, and the control system in MATLAB and Simulink. The project culminated in a complete cosimulation where the robot traced paths and responded to PID controllers in real time.
+In third year at UBC (Jan-Apr 2022), a group of three ([Jonathan Zhang](https://www.linkedin.com/in/jonhsz/), [Nico Zhu](https://www.linkedin.com/in/nico-z-934185130/) and [me](https://www.linkedin.com/in/nishjoe)) took on ELEC 391: a capstone style course where the objective was to design and simulate a fully functional robot arm. Our reference model was the **Yamaha YK350XG**, a commercial SCARA (Selective Compliance Articulated Robot Arm) used in industrial pick and place applications. We designed the robot entirely from scratch: the mechanical assembly in SolidWorks, the electronics in Altium Designer, and the control system in MATLAB and Simulink. The project culminated in a complete cosimulation where the robot traced paths and responded to PID controllers in real time.
 
 ![Robot Render](https://raw.githubusercontent.com/Nischay2312/4DOF-Scara-ARM/main/Assets/Images/RR.jpg){: .mx-auto.d-block :}
 
